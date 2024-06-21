@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubre Hoffman en puntos de venta selectos y experiencias exclusivas. Encuentra nuestra ginebra única en diferentes establecimientos. ¡Eleva tus momentos con Hoffman!">
+    <meta name="keywords"
+        content="puntos de venta, comprar, gin, ginebra, destilacion, hoffman, experiencia, drink, bebidas">
+    <meta name="robots" content="index,follow">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/29a760fd2c.js" crossorigin="anonymous"></script>
+
+    <!-- Sweetalert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="../assets/icons/f.jpg">
+
+    <title>Puntos de Venta - Gin Hoffman</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- NavBar -->
+        <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="../assets/img/logo_navbar.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="../assets/img/logo_navbar.png" alt="">
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav font-style justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="../index.html">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="../pages/shop.html">shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="">puntos de venta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="../pages/contact.html">contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Fin NavBar -->
+    </header>
+    <!-- Fin Header -->
+
+    <!-- Main -->
+    <main>
+        <section class="pos">
+            <div class="title-page">
+                <h2>PUNTOS DE VENTA</h2>
+            </div>
+            <article class="pos-wrapper">
+                <div class="state">
+                    <h3>Provincia</h3>
+                    <select class="select" id="provinceSelector" aria-label="Default select example">
+                        <option value="Santa Fe">Santa Fe</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Cordoba">Cordoba</option>
+                    </select>
+                </div>
+                <section class="place-data" id="placeData">
+                    <article class="pos-date" data-province="Santa Fe">
+                        <ul>
+                            <h4>Gin Hoffman</h4>
+                            <li><i class="fa-solid fa-address-card"></i>Entre Rios 407</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Villa Constitucion</li>
+                        </ul>
+                    </article>
+                    <article class="pos-date" data-province="Santa Fe">
+                        <ul>
+                            <h4>Cerveceria Berlina</h4>
+                            <li><i class="fa-solid fa-address-card"></i>Urquiza 2458</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Rosario</li>
+                        </ul>
+                    </article>
+                    <article class="pos-date" data-province="Santa Fe">
+                        <ul>
+                            <h4>Entre Copas</h4>
+                            <li><i class="fa-solid fa-address-card"></i>Cochabamba 1667</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Sante Fe</li>
+                        </ul>
+                    </article>
+                    <article class="pos-date" data-province="Buenos Aires">
+                        <ul>
+                            <h4>Buenos Aires Shop</h4>
+                            <li><i class="fa-solid fa-address-card"></i>Av. Libertador 1234</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Buenos Aires</li>
+                        </ul>
+                    </article>
+                    <article class="pos-date" data-province="Cordoba">
+                        <ul>
+                            <h4>Cordoba Drinks</h4>
+                            <li><i class="fa-solid fa-address-card"></i>Av. Colón 5678</li>
+                            <li><i class="fa-solid fa-location-dot"></i>Córdoba</li>
+                        </ul>
+                    </article>
+                </section>
+            </article>
+            <section class="google-maps">
+                <div id="map" style="height: 500px; width: 100%;"></div>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="card-foot text-center">
+            <div class="card-footer-body">
+                <div class="card-footer">
+                    <img src="../assets/img/logo_foot.png" alt="">
+                    <h5 class="card-title">PERRO BISI DESTILERÍA</h5>
+                    <p class="card-text">PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.instagram.com/ginhofmann/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5493364004419"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="card-footer-down">
+                    COPYRIGHT © 2024. TODOS LOS DERECHOS RESERVADOS.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin Footer -->
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Scripts JS -->
+    <script src="../js/validation.js"></script>
+    <script src="../js/pos.js"></script>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"
+        async defer></script>
+
+</body>
+
+</html>

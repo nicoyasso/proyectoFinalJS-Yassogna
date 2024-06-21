@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Gin Hoffman",
+        "size": "750 ml",
+        "price": 6300,
+        "img": "../assets/img/gin750.png"
+    },
+    {
+        "id": "2",
+        "name": "Small Hoffman",
+        "size": "375 ml",
+        "price": 3700,
+        "img": "../assets/img/gin375.png"
+    },
+    {
+        "id": "3",
+        "name": "Vodka Hercion",
+        "size": "750 ml",
+        "price": 5700,
+        "img": "../assets/img/vodka.png"
+    },
+    {
+        "id": "4",
+        "name": "Hercion Triple Dest",
+        "size": "750 ml",
+        "price": 11250,
+        "img": "../assets/img/vodkatri3.png"
+    },
+    {
+        "id": "5",
+        "name": "Vermouth Perro Bisi",
+        "size": "1000 ml",
+        "price": 5200,
+        "img": "../assets/img/vermo.png"
+    },
+    {
+        "id": "6",
+        "name": "Whisky Central Station",
+        "size": "750 ml",
+        "price": 10800,
+        "img": "../assets/img/whisky.png"
+    }
+]
