@@ -21,11 +21,9 @@ function cargarProductos() {
 function mostrarProductos() {
     const eventsCard = document.querySelector('.events-card');
     eventsCard.innerHTML = '';
-
     productos.forEach(producto => {
         const card = document.createElement('div');
         card.classList.add('car-shop', 'col-md-4');
-
         card.innerHTML = `
             <div class="card mb-4">
                 <img src="${producto.img}" class="card-img-top" alt="${producto.name}">
@@ -37,7 +35,6 @@ function mostrarProductos() {
                 </div>
             </div>
         `;
-
         eventsCard.appendChild(card);
     });
 }
@@ -52,12 +49,10 @@ function agregarAlCarrito(id, nombre, precio, img) {
     } else {
         carrito.push({ id, nombre, precio, img, cantidad: 1 });
     }
-
     localStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarContadorCarrito();
     mostrarCarrito();
-
-
+    
     Toastify({
         text: 'Producto agregado',
         duration: 1500,
@@ -69,8 +64,6 @@ function agregarAlCarrito(id, nombre, precio, img) {
             color: "#f5f5f5",
             fontSize: "15px",
             fontFamily: "Black Han Sans",
-
-
         },
     }).showToast();
 }
@@ -94,11 +87,9 @@ function mostrarCarrito() {
     let carritoItems = document.getElementById('carrito-items');
     let total = 0;
     carritoItems.innerHTML = '';
-
     carrito.forEach(item => {
         let itemElement = document.createElement('div');
         itemElement.classList.add('carrito-item');
-
         itemElement.innerHTML = `
             <img src="${item.img}" alt="${item.nombre}">
             <div class="carrito-item-info">
@@ -116,11 +107,9 @@ function mostrarCarrito() {
                 </button>
             </div>
         `;
-
         carritoItems.appendChild(itemElement);
         total += item.cantidad * item.precio;
     });
-
     document.getElementById('carrito-total').textContent = `Total: $${total.toFixed(2)}`;
 }
 
