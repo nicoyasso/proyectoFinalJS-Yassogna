@@ -160,17 +160,27 @@ function vaciarCarrito() {
 
 // Función para finalizar compra (usa SweetAlert2)
 function finalizarCompra() {
-    Swal.fire({
-        title: '¡Muchas gracias por tu compra!',
-        text: 'Recibimos tus datos y tu pedido. Pronto nos pondremos en contacto con usted.',
-        imageUrl: '../assets/img/logo_foot.png',
-        imageWidth: 100,
-        imageHeight: 100, 
-        confirmButtonText: 'Aceptar',
-        background: 'rgb(0, 0, 0, 0.9)',
-        color: '#f5f5f5',
-        confirmButtonColor: 'rgba(0, 0, 255, 0.8)',
-    });
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.length === 0
+        ? Swal.fire({
+            title: 'Para continuar, debes seleccionar un producto',
+            icon: 'warning',
+            background: 'rgb(0, 0, 0, 0.9)',
+            color: '#f5f5f5',
+            confirmButtonColor: 'rgba(0, 0, 255, 0.8)',
+        })
+
+        : Swal.fire({
+            title: '¡Muchas gracias por tu compra!',
+            text: 'Recibimos tus datos y tu pedido. Pronto nos pondremos en contacto con usted.',
+            imageUrl: '../assets/img/logo_foot.png',
+            imageWidth: 100,
+            imageHeight: 100,
+            confirmButtonText: 'Aceptar',
+            background: 'rgb(0, 0, 0, 0.9)',
+            color: '#f5f5f5',
+            confirmButtonColor: 'rgba(0, 0, 255, 0.8)',
+        });
 }
 
 // Cargar productos al cargar la página

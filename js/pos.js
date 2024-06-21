@@ -22,11 +22,12 @@ let map;
 const locations = {
     "Santa Fe": [
         { lat: -32.2425, lng: -60.4697, name: "Gin Hoffman" },
-        { lat: -32.9575, lng: -60.6397, name: "Cerveceria Berlina" },
+        { lat: -33.23325182848976, lng: -60.33330963330308, name: "Berlin" },
         { lat: -31.6475, lng: -60.7000, name: "Entre Copas" }
     ],
     "Buenos Aires": [
-        { lat: -34.6037, lng: -58.3816, name: "Buenos Aires Shop" }
+        { lat: -34.6037, lng: -58.3816, name: "Buenos Aires Shop" },
+        { lat: -34.55237689836479, lng: -58.45933285112947, name: "Fullescabio" }
     ],
     "Cordoba": [
         { lat: -31.4201, lng: -64.1888, name: "Cordoba Drinks" }
