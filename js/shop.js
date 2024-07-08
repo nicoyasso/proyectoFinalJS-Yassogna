@@ -176,4 +176,5 @@ function finalizarCompra() {
 document.addEventListener('DOMContentLoaded', () => {
     cargarProductos();
     actualizarContadorCarrito(); // Actualizar el contador del carrito al cargar la página
+     mostrarCarrito();
 });
