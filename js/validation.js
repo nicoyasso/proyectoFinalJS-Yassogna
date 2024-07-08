@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
         // Verificar si ya hay una respuesta almacenada en el Local Storage
     setTimeout(() => {
-        const edadLegal = localStorage.getItem('edadLegal');
+        const edadLegal = sessionStorage.getItem('edadLegal');
 
         !edadLegal ? mostrarPopupEdadLegal() : edadLegal === 'false' ? redirigirAGoogle() : null;
     }, 1500);
@@ -24,9 +24,10 @@ function mostrarPopupEdadLegal() {
 }
 
 function accesoPermitido() {
-    localStorage.setItem('edadLegal', 'true');
+    sessionStorage.setItem('edadLegal', 'true');
 }
 
 function redirigirAGoogle() {
+    sessionStorage.setItem('edadLegal', 'false');
     window.location.href = 'https://www.google.com';
 }
